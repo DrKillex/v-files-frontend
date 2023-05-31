@@ -1,11 +1,13 @@
 <script>
 import SearchBar from '../partials/SearchBar.vue';
 import FlagGame from '../partials/FlagGame.vue';
+import SpecialOffers from '../partials/SpecialOffers.vue';
 export default {
     name: 'AppJumbo',
     components: {
         SearchBar,
-        FlagGame
+        FlagGame,
+        SpecialOffers
     }
 }
 
@@ -14,6 +16,7 @@ export default {
 <template>
     <SearchBar />
     <FlagGame />
+    <SpecialOffers />
 </template>
 
 <style lang="scss" scoped>

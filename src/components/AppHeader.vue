@@ -6,8 +6,8 @@ export default {
 </script>
 
 <template>
-    <header class="p-3">
-        <div class="container">
+    <header>
+        <div class="container py-4">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
               <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"></svg> -->
@@ -42,10 +42,7 @@ export default {
 
 <style>
     header {
-            padding: 20px;
-            /* background-color: pink; */
             background-color: #171a21;
-            height: 125px;
             color: white;
     }
     .coloreinstalla {

@@ -1,8 +1,45 @@
 <script>
+import axios from 'axios'
 export default {
     name: 'SpecialOffers',
+    data() {
+        return {
+            apiBaseUrl: 'http://127.0.0.1:8000/api/',
+
+            apiUrl: {
+
+                gamesSales: 'gamesSales'
+
+            },
+            games: [],
+            // imagePath: '',
+            // gameDate: game.release
+        }
+    },
+    methods: {
+        getGames() {
+            axios.get(this.apiBaseUrl + this.apiUrl.gamesSales).then((response) => {
+                this.games = response.data.results.data ?? response.data.results
+                console.log(response)
+
+
+            })
+        },
+
+        calcPerc(price, discount) {
+            return (price - ((price * discount) / 100)).toFixed(2);
+        },
+
+
+    },
+    created() {
+        this.getGames();
+
+
+    }
 
 }
+
 
 </script>
 
@@ -12,55 +49,19 @@ export default {
             OFFERTE SPECIALI
         </h4>
         <div class="d-flex gap-5 justify-content-between">
-            <div>
-                <img src="https://cdn.wallpapersafari.com/87/92/1Nd4g3.png" alt="">
+            <div v-for="game in games">
+                <img :src="game.image" alt="">
                 <div class="price d-flex">
                     <div class="d-flex">
                         <div class="sconto h-100 d-flex align-items-center">
-                            <span class="sconto-span">50%</span>
+                            <span class="sconto-span">{{ game.discount_value }}%</span>
                         </div>
                         <div class="container-prezzo">
                             <div class="prezzo-pieno text-decoration-line-through">
-                                29.99
+                                {{ game.price }}$
                             </div>
                             <div class="prezzo-scontato">
-                                10.99
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <img src="https://cdn.wallpapersafari.com/87/92/1Nd4g3.png" alt="">
-                <div class="price d-flex">
-                    <div class="d-flex">
-                        <div class="sconto h-100 d-flex align-items-center">
-                            <span class="sconto-span">50%</span>
-                        </div>
-                        <div class="container-prezzo">
-                            <div class="prezzo-pieno text-decoration-line-through">
-                                29.99
-                            </div>
-                            <div class="prezzo-scontato">
-                                10.99
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <img src="https://cdn.wallpapersafari.com/87/92/1Nd4g3.png" alt="">
-                <div class="price d-flex">
-                    <div class="d-flex">
-                        <div class="sconto h-100 d-flex align-items-center">
-                            <span class="sconto-span">50%</span>
-                        </div>
-                        <div class="container-prezzo">
-                            <div class="prezzo-pieno text-decoration-line-through">
-                                29.99
-                            </div>
-                            <div class="prezzo-scontato">
-                                10.99
+                                {{ calcPerc(game.price, game.discount_value) }}$
                             </div>
                         </div>
                     </div>

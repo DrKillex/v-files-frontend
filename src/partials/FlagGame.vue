@@ -20,7 +20,7 @@ export default {
         getGames() {
             axios.get(this.apiBaseUrl + this.apiUrl.flaggedGame).then((response) => {
                 this.game = response.data.results
-                console.log(response)
+                // console.log(response)
                 // this.imagePath = response.data.results.thumb
 
             })
@@ -51,9 +51,9 @@ export default {
             <h1>Giochi</h1>
             <div class="d-flex bg-div p-4">
                 <div class="image-container">
-                    <img :src="game.thumb" alt="">
+                    <img :src="game.image" alt="">
                     <div>
-                        <font-awesome-icon :icon="['fas', 'book-journal-whills']" />
+                        <!-- <font-awesome-icon :icon="['fas', 'book-journal-whills']" /> -->
                     </div>
                     <div class="price d-flex" v-if="game.price > 0">
                         <div class="d-flex" v-if="game.discount_value">

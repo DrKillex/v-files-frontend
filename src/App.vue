@@ -1,15 +1,15 @@
 <script>
-import HelloApp from './components/HelloApp.vue';
+import AppMain from './components/AppMain.vue';
 export default {
-  name:'App',
+  name: 'App',
   components: {
-    HelloApp
+    AppMain
   }
 }
 </script>
 
 <template>
-  <HelloApp />
+  <AppMain />
 </template>
 
 

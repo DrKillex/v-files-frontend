@@ -1,4 +1,12 @@
-@use './_partial/reset' as *;
-@use './_partial/variables' as *;
-@import "bootstrap/scss/bootstrap";
-// @import "_partial/header";
+
+@use '_partial/reset' as *;
+@use '_partial/variables' as *;
+@use '_partial/jumbo' as *;
+@use '_partial/searchbar' as *;
+@use '_partial/flag' as *;
+@import 'bootstrap/scss/bootstrap';
+
+body {
+    background-color: #0f1014;
+}
+

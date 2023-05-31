@@ -31,7 +31,7 @@ export default {
                     <li class="nav-item">
                         <form>
                             <input type="search" placeholder="Search" aria-label="Search">
-                            <button type="submit">So</button>
+                            <button type="submit"><font-awesome-icon :icon="['fass', 'magnifying-glass']" /></button>
                         </form>
                     </li>
                 </ul>
@@ -47,11 +47,28 @@ nav {
     font-size: .8125rem;
     padding: 6px 0;
     margin-bottom: 60px;
-        ul {
-            margin-bottom: 0;
-            li {
-                margin-left: 10px;
+
+    ul {
+        margin-bottom: 0;
+
+        li {
+            margin-left: 10px;
+
+            form {
+                input {
+                    background-color: #336280;
+                    border: none;
+                    color: #579fcf;
+                }
+
+                button {
+                    border: none;
+                    background-color: #579fcf;
+                    padding: 0 3px;
+                    margin-right: 3px;
+                }
             }
+        }
     }
 }
 </style>

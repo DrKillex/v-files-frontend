@@ -8,7 +8,7 @@ export default {
 
 <template>
     <section class="p-4">
-        <div class="px-5">
+        <div class="container">
             <h4>I GIOCHI</h4>
             <div class="d-flex flex-wrap">
                 <div class="game d-flex justify-content-start align-items-center mb-2">

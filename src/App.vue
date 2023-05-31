@@ -1,19 +1,24 @@
 <script>
-import HelloApp from './components/HelloApp.vue';
+import axios from 'axios';
+import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
+
 export default {
-  name:'App',
+  name: 'App',
   components: {
-    HelloApp
+    AppHeader,
+    AppFooter
   }
 }
 </script>
 
 <template>
-  <HelloApp />
+  <AppHeader />
+  <AppFooter />
 </template>
 
-
 <style lang="scss">
-//versione 1 - inclusione via app.vue
+// versione 1 - via app.vue
 // @use './assets/scss/main.scss' as *;
 </style>
+

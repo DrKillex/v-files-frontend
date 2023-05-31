@@ -1,6 +1,4 @@
-@use '_partial/reset' as *;
-@use '_partial/variables' as *;
-
-body {
-    background-color: white;
-}
+@use './_partial/reset' as *;
+@use './_partial/variables' as *;
+@import "bootstrap/scss/bootstrap";
+// @import "_partial/header";

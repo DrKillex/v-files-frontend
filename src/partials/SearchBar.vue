@@ -41,7 +41,8 @@ export default {
 </template>
 <style lang="scss" scoped>
 nav {
-    background-color: #346294;
+    background-color: #355F8D;
+    background: linear-gradient(to right, #355F8D 0%, #1a3578 100%);
     align-items: center;
     font-size: .8125rem;
     padding: 6px 0;

@@ -47,7 +47,7 @@ export default {
 
 <template>
     <section>
-        <div class="container py-5" :style="{backgroundImage: 'url(' + game.image + ')'}">
+        <div class="container py-5" :style="{ backgroundImage: 'url(' + game.thumb + ')' }">
             <h1>Giochi</h1>
             <div class="d-flex bg-div p-4">
                 <div class="image-container">
@@ -116,8 +116,8 @@ section {
                     background-color: #38404B;
                     cursor: pointer;
                     position: absolute;
-                    bottom: 1px;
-                    left: 134px;
+                    bottom: 0px;
+                    left: 87px;
                 }
 
                 .sconto-span {
@@ -132,8 +132,8 @@ section {
                     font-size: 14px;
                     padding: 0 .3125rem;
                     position: absolute;
-                    left: 207px;
-                    bottom: 1px;
+                    left: 160px;
+                    bottom: 0px;
 
                     .prezzo-scontato {
                         color: #BDEC48;

@@ -30,8 +30,8 @@ export default {
                 <li><a href="#" class="nav-link px-2 text-white"><small>Distribuzione su Steam</small></a></li>
                 <li><a href="#" class="nav-link px-2 text-white"><small>Assistenza</small></a></li>
                 <li><a href="#" class="nav-link px-2 text-white"><small>Buoni regalo</small></a></li>
-                <li><a href="#" class="nav-link px-2 text-white"><small> Steam</small></a></li>
-                <li><a href="#" class="nav-link px-2 text-white"><small> Steam</small></a></li>
+                <li><a href="#" class="nav-link px-2 text-white"><small><font-awesome-icon :icon="['fab', 'facebook']" /> Steam</small></a></li>
+                <li><a href="#" class="nav-link px-2 text-white"><small><font-awesome-icon :icon="['fab', 'twitter']" /> Steam</small></a></li>
             </ul>
         </div>
     </footer>

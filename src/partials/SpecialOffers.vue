@@ -45,23 +45,25 @@ export default {
 
 <template>
     <section>
-        <h4>
-            OFFERTE SPECIALI
-        </h4>
-        <div class="d-flex gap-5 justify-content-between">
-            <div v-for="game in games">
-                <img :src="game.image" alt="">
-                <div class="price d-flex">
-                    <div class="d-flex">
-                        <div class="sconto h-100 d-flex align-items-center">
-                            <span class="sconto-span">{{ game.discount_value }}%</span>
-                        </div>
-                        <div class="container-prezzo">
-                            <div class="prezzo-pieno text-decoration-line-through">
-                                {{ game.price }}$
+        <div class='container py-5'>
+            <h4>
+                OFFERTE SPECIALI
+            </h4>
+            <div class="d-flex gap-5 justify-content-around">
+                <div v-for="game in games">
+                    <img :src="game.image" alt="">
+                    <div class="price d-flex">
+                        <div class="d-flex">
+                            <div class="sconto h-100 d-flex align-items-center">
+                                <span class="sconto-span">{{ game.discount_value }}%</span>
                             </div>
-                            <div class="prezzo-scontato">
-                                {{ calcPerc(game.price, game.discount_value) }}$
+                            <div class="container-prezzo">
+                                <div class="prezzo-pieno text-decoration-line-through">
+                                    {{ game.price }}$
+                                </div>
+                                <div class="prezzo-scontato">
+                                    {{ calcPerc(game.price, game.discount_value) }}$
+                                </div>
                             </div>
                         </div>
                     </div>

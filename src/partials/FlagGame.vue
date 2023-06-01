@@ -47,7 +47,7 @@ export default {
 
 <template>
     <section>
-        <div class="container py-5">
+        <div class="container py-5" :style="{backgroundImage: 'url(' + game.image + ')'}">
             <h1>Giochi</h1>
             <div class="d-flex bg-div p-4">
                 <div class="image-container">
